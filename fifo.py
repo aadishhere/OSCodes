@@ -17,3 +17,11 @@ for i in s:
         fault += 1
         pf = 'Yes'
     else:
+        pf = 'No'
+    print("   %d\t\t"%i,end='')
+    for x in f:
+        print(x,end=' ')
+    for x in range(capacity-len(f)):
+        print(' ',end=' ')
+    print(" %s"%pf)
+print("\nTotal requests: %d\nTotal Page Faults: %d\nFault Rate: %0.2f%%"%(len(s),fault,(fault/len(s))*100))
